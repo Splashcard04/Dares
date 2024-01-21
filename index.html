@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare Game Dare.games</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+    <p id="header" class="header">Dare Generator</p>
+
+    <div id="btncontainer" class="container">
+        <button id="easy" class="ez">Easy</button>
+        <button id="medium" class="mdm">Medium</button>
+        <button id="hard" class="hrd">Hard</button>
+        <button id="veryhard" class="vhrd">Very Hard</button>
+    </div>
+
+    <p id="dareHead" class="drhd"></p> 
+    <br>
+    <p id="dare" class="dr"></p>
+
+
+    <script>
+
+        const easyDares = [
+            'Say the first thing that comes to your mind.', 
+            `Dance for 30 seconds to a song of others' choice.`,
+            'Do 10 pushups.',
+            `Do your best impression of someone else in the group.`,
+            `Do your best impression of a celebrity.`,
+            `Do the worm`,
+            `Prank call a friend who isn't with you`,
+            `Call someone and tell them that youre in jail.`,
+            `Free pass!`
+        ]
+
+        const mediumDares = [
+            `Hold an ice cube in your mouth until it melts`,
+            `Show a young photo of yourself.`,
+            `Talk in a british Accent until your next turn.`,
+            `Do the weirdest dance possible`,
+            `Rip scotch tape off eyebrow.`,
+            `Have an argument with the wall for 30 seconds.`,
+            `Ice your face for 30 Seconds`,
+            `Text your parents that they're grounded for one week.`,
+            `Reinact a vine.`,
+            `Bark at someone random.`,
+            `Free pass!`
+        ]
+
+        const hardDares = [
+            `Read the last 5 text messages on your phone aloud.`,
+            `Howl like a wolf.`,
+            `Call a family member and sing a song of the group's choosing.`,
+            `Freestyle over a youtube beat.`,
+            `Chug sparkling water and try not to burp.`,
+            `Let the group style your hair.`,
+            `Give yourself a combover and keep it until the end of the game.`,
+            `Sprint to a neighbors house and back.`,
+            `Let the group paint your nails.`,
+            `Sharpie mustache.`,
+            `Free pass!`
+        ]
+
+        const veryHardDares = [
+            'Step on lego pile.',
+            `Dry scoop protein powder.`,
+            `You get +1 chicken!`,
+            `Expose your forehead.`,
+            `Let a group member message anyone on your phone.`,
+            `Take a shot of water mixed with milk.`,
+            `Post a selfie with a toilet as an Instagram story.`,
+            `Pass any dare to a group member!`, 
+            `Eat a scoom of cinnamon.`,
+            `Mint gum then orange juice.`,
+            `Free pass!`
+        ]
+
+        const easyBtn = document.getElementById('easy')
+        const mediumBtn = document.getElementById('medium')
+        const hardBtn = document.getElementById('hard')
+        const veryHardBtn = document.getElementById('veryhard')
+        const dareText = document.getElementById('dare')
+        const dareHeader = document.getElementById('dareHead')
+
+        easyBtn.addEventListener('click', () => {
+            let dare = easyDares[Math.floor(Math.random()*easyDares.length)]
+            dareHeader.innerHTML = `Your Dare Is:`
+            dareText.innerHTML = dare
+        })
+
+        mediumBtn.addEventListener('click', () => {
+            let dare = mediumDares[Math.floor(Math.random()*mediumDares.length)]
+            dareHeader.innerHTML = `Your Dare Is:`
+            dareText.innerHTML = dare
+        })
+
+        hardBtn.addEventListener('click', () => {
+            let dare = hardDares[Math.floor(Math.random()*hardDares.length)]
+            dareHeader.innerHTML = `Your Dare Is:`
+            dareText.innerHTML = dare
+        })
+
+        veryHardBtn.addEventListener('click', () => {
+            let dare = veryHardDares[Math.floor(Math.random()*veryHardDares.length)]
+            dareHeader.innerHTML = `Your Dare Is:`
+            dareText.innerHTML = dare
+        })
+
+    </script>
+
+    <div class="rules">
+
+        <p id="ruledhd" class="rulesHead">Game rules; Optional</p>
+        <p id="rulebdy" class="rulesBody">
+            1. The oldest player goes first. <br>
+            2. Each dare you choose is worth points. <br>
+            (Easy: 1, Medium: 2, Hard: 3 and Very Hard: 5) <br>
+            3. Each player starts with three chickens but can earn more throughout the game. <br>
+            4. Every time you use a chicken to avoid a dare you lose it. <br>
+            5. Once a player runs out of chickens, they are out of the game and end with their current point total <br>
+            6. Whoever ends with the highest point total wins!
+        </p>
+
+    </div>
+
+</body>
+</html>
